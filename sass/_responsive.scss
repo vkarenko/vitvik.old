@@ -1,0 +1,32 @@
+@media only all and (max-width: 999px) {
+	.prepage {
+		.arrow {
+			display: none;
+		}
+		.column {
+			padding: 30px 0;
+			.text-box {
+				.small-link {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+@media only all and (max-width: 760px) {
+	.prepage {
+		> div {
+			float: none;
+			width: 100%;
+			&.vitalii .column {
+				width: auto;
+				float: none;
+			}
+			&.viktoria .column {
+				float: none;
+				width: auto;
+			}
+		}
+	} 
+}

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+	<!-- responsive design -->
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="HandheldFriendly" content="true" />
+	<!-- /responsive design -->
+
+	<title>{Title}</title>
+	<link rel="shortcut icon" href="{Favicon}">
+	<link rel="alternate" type="application/rss+xml" href="{RSS}">
+	{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+
+	<meta name="color:Background" content="#ffffff"/>
+	<meta name="color:Center" content="#FFFFFF"/>
+	<meta name="color:Titles" content="#222222"/>
+	<meta name="color:Text" content="#555555"/>
+	<meta name="color:Link" content="#333333"/>
+	<meta name="color:Link Hover" content="#000000"/>
+	<meta name="color:border" content="#ececec"/>
+
+	<meta name="image:Background" content="#ffffff" />
+	<meta name="image:Header Logo" content="" />
+	<meta name="image:Sidebar Portrait" content="" />
+
+	<meta name="if:Infinite scrolling" content="0" />
+	<meta name="if:Background Image Fixed" content="0" />
+	<meta name="if:Background Image Resize" content="0" />
+	<meta name="if:Sidebar" content="0" /> 
+	<meta name="if:Sidebar Right" content="0" /> 
+	<meta name="if:Hide Description" content="1" />
+	<meta name="if:Round Borders" content="0" />
+	<meta name="if:Borders" content="0" />
+	<meta name="if:Shadow" content="0" /> 
+	<meta name="if:Hide Permalinks" content="0" /> 
+	<meta name="if:Show submit" content="0" />
+
+	<meta name="text:Link Symbols" content="~" />
+	<meta name="text:Ask Title" content="Ask" />
+	<meta name="text:Link 1" content="" />
+	<meta name="text:Link 1 Title" content="" />
+	<meta name="text:Link 2" content="" />
+	<meta name="text:Link 2 Title" content="" />
+	<meta name="text:Link 3" content="" />
+	<meta name="text:Link 3 Title" content="" />
+	<meta name="text:Link 4" content="" />
+	<meta name="text:Link 4 Title" content="" />
+	<meta name="text:Link 5" content="" />
+	<meta name="text:Link 5 Title" content="" />
+
+	<style type="text/css">
+	#credit_box {
+		display: none!important;
+	}
+	html, body, div, span, applet, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, font, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var,
+	b, u, i, center,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td {
+		margin: 0;
+		padding: 0;
+		outline: 0;
+		border: 0;
+		background: transparent;
+		vertical-align: baseline;
+		font-size: 100%;
+	}
+	ol, ul {
+		list-style: none;
+	}
+	blockquote, q {
+		quotes: none;
+	}
+	:focus {
+		outline: 0;
+	}
+	ins {
+		text-decoration: none;
+	}
+	del {
+		text-decoration: line-through;
+	}
+	table {
+		border-spacing: 0;
+		border-collapse: collapse;
+	}
+	html {
+		height: 100%;
+	}
+	header, nav, section, article, aside, footer {
+		display: block;
+	}
+	body {
+		height: 100%;
+		background: #fff;
+		letter-spacing: 0.03em;
+		min-width: 320px;
+		font: 300 12px/18px 'Helvetica neue', Arial, Tahoma, Verdana, sans-serif;
+	}
+	a {
+		outline: none;
+		color: #777;
+		text-decoration: none;
+		-webkit-transition: color 0.3s ease;
+		-moz-transition: color 0.3s ease;
+		-ms-transition: color 0.3s ease;
+		-o-transition: color 0.3s ease;
+		transition: color 0.3s ease;
+	}
+	a:hover {
+		color: #333;
+	}
+	p {
+		margin: 0 0 20px;
+		line-height: 18px;
+	}
+	img {
+		max-width: 100%;
+		border: none;
+	}
+	input {
+		vertical-align: middle;
+	}
+	h1, h2, h3 {
+		text-transform: uppercase;
+	}
+	h1 {
+		letter-spacing: 0.1em;
+		font-weight: 400;
+		font-size: 24px;
+	}
+	h2 {
+		font-size: 18px;
+		font-weight: 400;
+		letter-spacing: 0.1em;
+		line-height: 24px;
+		margin-bottom: 24px;
+	}
+	h3 {
+		margin-bottom: 6px;
+		font-weight: 500;
+		font-style: normal;
+		font-size: 15px;
+		line-height: 20px;
+	}
+	*::-moz-selection {
+		background: none repeat scroll 0 0 #333333;
+		color: #FFFFFF;
+		text-shadow: none;
+	}
+	::selection {
+	background: #333;
+	color: #fff;
+	text-shadow: none;
+	}
+	#tumblr_controls{
+		position:fixed!important;
+	}
+	.clear {clear:both;}
+	/*theme styles*/
+	#header{
+		overflow: hidden;
+		border-bottom: 1px solid #ececec;
+	}
+		.header-wrapper {
+			margin: 0 auto;
+			overflow: hidden;
+			padding: 0 12px;
+			width: 1200px;
+		}
+			.logo-box {
+				display: block;
+				height: 46px;
+				margin: 48px 12px;
+				width: 120px;
+			}
+				.logo-box img {
+					display: block;
+					max-width: 100%;
+				}
+	.wrapper {
+		width: 1200px;
+		margin: 0 auto;
+		padding: 72px 12px;
+	}
+		#container {
+			margin: 0 auto;
+			overflow: hidden;
+		}
+			.index-post {
+				width: 376px;
+				margin: 0 12px 24px;
+				/*padding: 10px;*/
+				background: #fff;
+				/*border: 1px solid #ececec;*/
+				float: left;
+				-webkit-transition: all 0.3s linear 0s;
+				-moz-transition: all 0.3s linear 0s;
+				-o-transition: all 0.3s linear 0s;
+				-ms-transition: all 0.3s linear 0s;
+				transition: all 0.3s linear 0s;
+			}
+				#picture {
+					position: relative;
+					overflow: hidden;
+				}
+					#picture .hover {
+						position: absolute;
+						top: -55px;
+						right: 10px;
+						-webkit-transition: all 0.3s linear 0s;
+						-moz-transition: all 0.3s linear 0s;
+						-o-transition: all 0.3s linear 0s;
+						-ms-transition: all 0.3s linear 0s;
+						transition: all 0.3s linear 0s;
+						padding: 5px;
+						border-radius: 3px;
+						background: rgba(0, 0, 0, 0.4);
+					}
+					#picture:hover .hover {
+						top: 10px;
+					}
+					#picture > a {
+						display: block;
+						position: relative;
+					}
+						#picture > a .hover-a {
+							position: absolute;
+							width: 100%;
+							height: 100%;
+							background: rgba(0, 0, 0, 0.2);
+							opacity: 0;
+							top: 0;
+							left: 0;
+							-webkit-transition: all 0.3s linear 0s;
+							-moz-transition: all 0.3s linear 0s;
+							-o-transition: all 0.3s linear 0s;
+							-ms-transition: all 0.3s linear 0s;
+							transition: all 0.3s linear 0s;
+						}
+						#picture > a:hover .hover-a {
+							opacity: 1;
+						}
+						#picture > a img {
+							display: block;
+							max-width: 100%;
+						}
+				.index-post .text-post {
+					padding: 23px;
+					border: 1px solid #ececec;
+				}
+		.photo-wrapp img {
+			display: block;
+			max-width: 100%;
+			margin: 0 auto;
+		}
+		.post-info {
+			text-align: center;
+			padding: 5px 0;
+		}
+			.post-info span {
+				margin: 0 30px;
+				display: block;
+			}
+		.back-to-posts {
+			text-align: center;
+			padding: 30px 0;
+		}
+			.back-to-posts a {
+				display: block;
+				width: 200px;
+				padding: 50px 0 0;
+				margin: 0 auto;
+				color: #000;
+				opacity: 0.3;
+				background: transparent url('http://vitvik.com/images/tumblr/posts-icon.png') no-repeat scroll top center;
+				-webkit-transition: all 0.3s linear 0s;
+				-moz-transition: all 0.3s linear 0s;
+				-o-transition: all 0.3s linear 0s;
+				-ms-transition: all 0.3s linear 0s;
+				transition: all 0.3s linear 0s;
+				text-transform: uppercase;
+			}
+			.back-to-posts a:hover {
+				opacity: 1;
+			}
+	@media only all and (max-width: 1279px) {
+		.header-wrapper {
+			width: 960px;
+		}
+		.wrapper {
+			width: 960px;
+		}
+		.index-post {
+			width: 296px;
+		}
+	}
+	@media only all and (max-width: 1023px) {
+		.header-wrapper {
+			width: 774px;
+		}
+		.wrapper {
+			width: 774px;
+		}
+		.index-post {
+			width: 234px;
+		}
+	}
+	@media only all and (max-width: 799px) {
+		.header-wrapper {
+			width: 576px;
+		}
+		.wrapper {
+			width: 576px;
+		}
+		.index-post {
+			width: 264px;
+		}
+	}
+	@media only all and (max-width: 599px) {
+		.header-wrapper {
+			width: 456px;
+		}
+		.wrapper {
+			width: 456px;
+		}
+		.index-post {
+			width: 204px;
+		}
+	}
+	@media only all and (max-width: 479px) {
+		.header-wrapper {
+			width: 296px;
+		}
+		.wrapper {
+			width: 296px;
+		}
+		.index-post {
+			width: 272px;
+		}
+	}
+	</style>
+</head>
+
+<body>
+<div id="header">
+	<div class="header-wrapper">
+		<a class="logo-box" href="http://vitvik.com/vitalii/">
+			<img src="http://vitvik.com/vitalii/images/site/logo-vitalii.png" alt="Vitalii">
+		</a>
+	</div>
+</div><!-- End Header-->
+
+<div class="wrapper">
+	{block:IndexPage}
+	<div id="container">
+		{block:Posts}
+		<div class="index-post">
+			{block:Text}
+			<div class="text-post">
+				{block:Title}
+					<h2><a href="{Permalink}">{Title}</a></h2>
+				{/block:Title}
+				{Body}
+			</div>
+			{/block:Text}
+
+			{block:Photo}
+			<div id="photo">
+				<div id="picture">
+					<a class="open-post" href="{Permalink}">
+						<img src="{PhotoURL-500}" />
+						<div class="hover-a"></div>
+					</a>
+					<div class="hover">
+						{LikeButton}
+						{ReblogButton}
+					</div>
+				</div>
+			</div>
+			{/block:Photo}
+		</div>
+		{/block:Posts}
+	</div>
+		{block:Pagination}
+		<div class="navigation">
+			{block:PreviousPage}
+				<a href="{PreviousPage}" class="previous">Previous</a>
+			{/block:PreviousPage}
+
+			{block:NextPage}
+				<a href="{NextPage}" class="next">Next</a>
+			{/block:NextPage}
+			<div class="clear"></div>
+		</div>
+		{/block:Pagination}
+	{/block:IndexPage}
+
+	{block:PermalinkPage}
+		{block:Posts}
+			{block:Photo}
+			<div class="photo-wrapp">
+				<img src="{PhotoURL-HighRes}" />
+			</div>
+			{/block:Photo}
+			<div class="post-info">
+				<span>{block:NoteCount}♥ {NoteCount}{/block:NoteCount}</span>
+				<span>Posted on {DayOfMonth} {Month} {Year}.</span>
+			</div>
+		{/block:Posts}
+		<div class="back-to-posts">
+			<a href="/" title"back to the index page">back to the index page</a>
+		</div>
+	{/block:PermalinkPage}
+</div>
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://vitvik.com/js/masonry.pkgd.min.js"></script>
+	<script type="text/javascript" src="http://static.tumblr.com/me5sfsd/12Qlmj66n/script.js"></script>
+
+	<script>
+	$(function(){
+
+		var $container = $('#container').masonry();
+
+		$container.imagesLoaded( function(){
+			$container.masonry({
+				itemSelector : '.index-post',
+				isFitWidth: true
+			});
+		});
+
+		$(window).resize(function(){
+			$container.imagesLoaded( function(){
+				$container.masonry({
+					itemSelector : '.index-post',
+					isFitWidth: true
+				});
+			});
+		});
+
+	});
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+@charset "UTF-8";
+/*VKarenko 10.10.2013 SCSS styling
+Source file location: sass/base.compact.scss:css/base.compact.css*/
+
+@media only all and (max-width: 799px) {
+	.container {
+		max-width: 640px;
+	}
+	.h-conteiner {
+		max-width: 616px;
+	}
+	.heading p {
+		padding: 0 50px 72px;
+		// letter-spacing: 0.04em;
+		font: normal 18px/28px 'TheanoOldStyleRegular',serif;
+	}
+	.samples .item {
+		width: 296px;
+		&.large {
+			width: 616px;
+		}
+	}
+	.main-skills .column {
+		margin: 0 0 20px 10px;
+		width: 206px;
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+	.other-skils .item {
+		margin: 0 auto 40px;
+		width: 480px;
+		float: none;
+		span {
+			text-align: justify;
+		}
+	}
+	#footer .footer-top .column {
+		width: 280px;
+		margin: 0 68px 40px 12px;
+	}
+	#footer .footer-top .column:last-child {
+		width: 590px;
+	}
+	.container .project .project-heading {
+		word-wrap: break-word;
+		p {
+			padding: 0 50px 0px;
+		}
+	}
+}
+
+@media only all and (max-width: 659px) {
+	.container {
+		max-width: 460px;
+	}
+	.h-conteiner {
+		max-width: 436px;
+	}
+	#nav {
+		padding: 10px 0;
+		li {
+			float: none;
+			display: block;
+			width: 150px;
+			text-align: center;
+			padding: 12px 22px 8px 22px;
+			&:last-child {
+				padding: 12px 22px 8px 22px;
+			}
+		}
+	}
+	.heading p {
+		padding: 0 12px 72px;
+	}
+	.samples .item {
+		width: 436px;
+		&.large {
+			width: 436px;
+		}
+	}
+	.main-skills .column {
+		margin: 0 10px 20px 10px;
+		width: 210px;
+		&:first-child {
+			margin: 0 10px 20px 10px;
+		}
+		&:last-child {
+			clear: both;
+			float: none;
+			margin: 0 auto 20px;
+		}
+	}
+	.other-skils {
+		p {padding: 0px 20px 40px;}
+		.item {
+			width: 440px;
+			&.last {
+				margin: 0 auto 40px;
+			}
+		}
+	}
+	#footer {
+		.container {
+			overflow: hidden;
+		}
+		.footer-top .column {
+			width: 420px;
+			margin: 0 auto 40px;
+			float: none;
+			text-align: center;
+			&:last-child {
+				width: 420px;
+				margin: 0 auto 40px;
+			}
+			&:nth-child(2) {
+				width: 420px;
+				margin: 0 auto 40px;
+			}
+			h3 {
+				border-bottom: 1px solid #ececec;
+				line-height: 34px;
+				text-align: center;
+			}
+		}
+	}
+}
+
+@media only all and (max-width: 479px) {
+	.container {
+		max-width: 300px;
+	}
+	.h-conteiner {
+		max-width: 276px;
+	}
+	.logo-pos {
+		float: none;
+		margin: 0 auto;
+		width: 120px;
+		.logo {
+			margin: 24px 0;
+		}
+	}
+	.nav-wrapper {
+		float: none;
+		width: 200px;
+		margin: 0 auto;
+	}
+	.samples .item {
+		width: 300px;
+		margin: 0 0 24px;
+		&.large {
+			width: 300px;
+		}
+	}
+	.main-skills .column {
+		margin: 0 auto 20px;
+		width: 300px;
+		float: none;
+		&:first-child {
+			margin: 0 auto 20px;
+		}
+	}
+	.other-skils .item {
+		margin: 0 auto 40px;
+		width: 300px;
+	}
+	#footer .footer-top .column {
+		margin: 0 auto 36px;
+		width: 300px;
+		&:nth-child(2) {
+			margin: 0 auto 36px;
+			width: 300px;
+		}
+		&:last-child {
+			margin: 0 auto;
+			width: 300px;
+		}
+	}
+	#footer .footer-bottom .social a {
+		margin: 0 6px 0 0;
+		&:last-child {
+			margin: 0;
+		}
+	}
+}

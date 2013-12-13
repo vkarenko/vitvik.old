@@ -1,0 +1,69 @@
+/*VKarenko 10.10.2013 SCSS styling
+Source file location: sass/base.medium.scss:css/base.medium.css*/
+@media only all and (max-width: 1279px) {
+  .container {
+    max-width: 984px; }
+
+  .h-conteiner {
+    padding: 0 12px;
+    max-width: 960px; }
+
+  .heading p {
+    padding: 0 100px 72px; }
+
+  .samples .item {
+    margin: 0 12px 24px;
+    width: 304px; }
+    .samples .item.large {
+      width: 632px; }
+
+  .main-skills .column {
+    margin: 0 12px 24px;
+    width: 304px; }
+
+  .other-skils .item {
+    margin: 0 40px 0 0;
+    width: 216px; }
+    .other-skils .item p {
+      font-size: 17px; }
+
+  #footer .footer-top .column {
+    margin: 0 12px 24px;
+    width: 304px; } }
+@media only all and (max-width: 1023px) {
+  .container {
+    max-width: 780px; }
+
+  .h-conteiner {
+    max-width: 756px; }
+
+  .samples .item {
+    margin: 0 12px 24px;
+    width: 236px; }
+    .samples .item.large {
+      width: 496px; }
+    .samples .item .hover .link-text {
+      top: 35%; }
+      .samples .item .hover .link-text h2 {
+        font: normal 18px/20px 'CantarellRegular',sans-serif; }
+
+  .main-skills .column {
+    margin: 0 12px 24px;
+    width: 236px; }
+
+  .other-skils .item {
+    margin: 0 59px 40px;
+    width: 271px; }
+    .other-skils .item.last {
+      margin: 0 60px 40px; }
+    .other-skils .item p {
+      font-size: 18px; }
+
+  #footer .footer-top .column {
+    width: 290px;
+    margin: 0 188px 40px 12px; }
+    #footer .footer-top .column:nth-child(2) {
+      margin: 0 0 40px; }
+    #footer .footer-top .column:last-child {
+      width: 750px;
+      margin: 0 12px 40px; } }

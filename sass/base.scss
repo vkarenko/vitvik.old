@@ -1,0 +1,407 @@
+//Vitvik main scss file
+@import "main"; //main objects styles
+@import "reset"; //reset styles
+
+// .welcome-page styles
+//hovered styles for Welcome page
+body.hovered {
+	background: $sub-color;
+	.welcome-page {
+		border-color: #4E3136;
+		
+	}
+	.welcome-logo-container { 
+		p {
+			color: $primary-color;
+		}
+	}
+}
+.welcome-page {
+	position: relative;
+	overflow: hidden;
+	border: 8px solid $sub-color;
+	min-height: 400px;
+
+	.welcome-logo-container {
+		position: absolute;
+		width: 300px;
+		height: 400px;
+		top: 50%;
+		left: 50%;
+		margin: -200px 0 0 -150px;
+		z-index: 8;
+		cursor: pointer;
+		@include user-select(none);
+		-webkit-touch-callout: none;
+		&:hover {
+			.welcome-logo {
+				background-position: 0 -299px;
+			}
+		}
+
+		.welcome-logo {
+			position: relative;
+			display: block;
+			margin: 0 auto;
+			width: 300px;
+			height: 300px;
+			background: transparent url('../gfx/site/welcome-logo.png') no-repeat scroll 0 0;
+			background-size: 300px;
+		}
+		p {
+			text-align: center;
+			margin: 0;
+			color: $sub-color;
+			font: normal 19px/1 'TheanoOldStyleRegular', serif;
+			transition: all 1s linear;
+			&.name {
+				font-size: 38px;
+				margin: 0 0 5px 0;
+			}
+		}
+	}
+}
+//bubles
+.bubles {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	.bubles-one, .bubles-two, .bubles-three {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		height: 1080px;
+		width: 1920px;
+		margin: -540px 0 0 -960px;
+		display: none;
+	}
+	.bubles-one {
+		background: transparent url('../gfx/bubles/bubles1_2.png') no-repeat scroll 0 0;
+	}
+	.bubles-two {
+		background: transparent url('../gfx/bubles/bubles2_2.png') no-repeat scroll 0 0;
+	}
+	.bubles-three {
+		background: transparent url('../gfx/bubles/bubles3_2.png') no-repeat scroll 0 0;
+	}
+}
+//Prepage
+.prepage {
+	width: 100%;
+	overflow: hidden;
+	.small-link {
+		display: none;
+		width: 140px;
+		margin: 0 auto;
+		color: $sub-color;
+		height: 60px;
+		line-height: 60px;
+		padding: 0 0 0 60px;
+		font-size: 17px;
+		text-align: center;
+		text-decoration: none;
+	}
+	> div {
+		position: relative;
+		float: left;
+		overflow: hidden;
+		width: 50%;
+		height: 100%;
+		//Vitalii styles
+		&.vitalii {
+			color: $primary-color;
+			background-color: $sub-color;
+			min-height: 940px;
+			.column {
+				float: right;
+			}
+			.text-box h2 span {
+				border-bottom: 2px solid $primary-color;
+			}
+			.image-box a {
+				background: transparent url('../gfx/photos/vitalii.jpg') no-repeat scroll 0 0;
+			}
+			.social-links-box {
+				border-top: 2px solid $primary-color;
+			}
+			.arrow {
+				left: 1%;
+				background: transparent url('../gfx/icons/arrow-left.png') no-repeat center 0;
+				span {
+					left: 70px;
+					color: $primary-color;
+				}
+			}
+			.small-link {
+				background: url('../gfx/icons/arrow-left.png') no-repeat scroll 0 0 transparent;
+				color: $primary-color;
+				&:hover {
+					background-position: 0 -61px;
+				}
+			}
+		}
+		//Viktoria styles
+		&.viktoria {
+			color: $sub-color;
+			.column {
+				float: left;
+			}
+			.image-box a {
+				background: transparent url('../gfx/photos/vika.jpg') no-repeat scroll 0 0;
+			}
+			.social-links-box {
+				.tw {
+					background-position: 0 0;
+					&:hover {
+						background-position: 0 -25px; 
+					}
+				}
+				.tmb {
+					background-position: -25px 0;
+					&:hover {
+						background-position: -25px -25px;
+					}
+				}
+				.lin {
+					background-position: -50px 0px;
+					&:hover {
+						background-position: -50px -25px;
+					}
+				}
+			}
+			.arrow {
+				right: 1%;
+				background: transparent url('../gfx/icons/arrow-right.png') no-repeat center 0;
+				span {
+					right: 70px;
+				}
+			}
+			.small-link {
+				background: url("../gfx/icons/arrow-right.png") no-repeat scroll right 0 transparent;
+				padding: 0 60px 0 0;
+				&:hover {
+					background-position: right -61px;
+				}
+			}
+		}
+	}
+	.column {
+		padding: 30px;
+		width: 400px;
+		.image-box {
+			overflow: hidden;
+			margin: 0 auto;
+			width: 260px;
+			height: 260px;
+			border-radius: 100%;
+			transition-duration: 0.5s;
+			&:hover {
+				border-radius: 10px;
+			}
+			a {
+				display: block;
+				width: 260px;
+				height: 260px;
+				text-indent: -50000px;
+				&:hover {
+					background-position: 0 -260px!important;
+				}
+			}
+		}
+		.text-box {
+			padding: 40px;
+			h2 {
+				text-align: center;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				font: normal 22px/1.5 'TheanoOldStyleRegular', serif;
+				span {
+					display: block;
+					margin: 5px auto;
+					width: 45%;
+					border-bottom: 2px solid $sub-color;
+				}
+			}
+			h3 {
+				padding: 5px 0;
+				text-align: center;
+				font: normal 16px/1 serif;
+				font-style: italic;
+			}
+			p {
+				margin: 0 auto;
+				padding: 15px 0;
+				width: 200px;
+				text-align: justify;
+				font-size: 14px;
+				line-height: 1.5;
+			}
+		}
+	}
+	.social-links-box {
+		overflow: hidden;
+		margin: 0 auto;
+		padding: 20px 0;
+		width: 200px;
+		border-top: 2px solid $sub-color;
+		a { 
+			float: left; 
+			margin-right: 10px; 
+			width: 25px; 
+			height: 25px; 
+			background: transparent url('../gfx/icons/social-ico.png') no-repeat scroll 0 0;
+			background-size: 75px; 
+			text-indent: -50000px;
+			&.tw { 
+				background-position: 0 -50px;
+				&:hover { 
+					background-position: 0 -75px;
+				}
+			}
+			&.tmb { 
+				background-position: -25px -50px;
+				&:hover { 
+					background-position: -25px -75px;
+				}
+			}
+			&.lin { 
+				background-position: -50px -50px;
+				&:hover {
+					background-position: -50px -75px;
+				}
+			}
+		}
+	}
+	.arrow {
+		position: fixed;
+		top: 50%;
+		margin: -50px 0 0;
+		width: 60px;
+		height: 60px;
+		color: $sub-color;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 0;
+		&:hover {
+			background-position: center -60px!important;
+			font-size: 16px;
+			line-height: 1;
+		}
+		span {
+			position: absolute;
+			top: 15px;
+			display: block;
+			transition: all 0.3s ease 0s;
+		}
+	}
+}
+//differnt styles for: NO JS, OLD Browsers, and responsive
+.warnings {
+	background-color: $sub-color;
+	color: $primary-color;
+	text-align: center;
+	font-size: 16px;
+	line-height: 1.4;
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 500;
+	> div {
+		padding: 15px;
+		border: 1px solid $primary-color;
+		display: none;
+		p {
+			margin: 0
+		}
+	}
+	.best-browsers {
+		overflow: hidden;
+		max-width: 480px;
+		margin: 0 auto;
+		a {
+			float: left;
+			padding: 32px 0 0 0;
+			background: transparent url('../gfx/icons/icons-browsers.png') no-repeat scroll center 0;
+			height: 32px;
+			line-height: 32px;
+			margin: 30px 0 0;
+			text-align: center;
+			width: 120px;
+			color: $primary-color;
+			&:hover {
+				color: #9F5E67;
+			}
+			&.firf {
+				background-position: center -64px;
+			}
+			&.ie {
+				background-position: center -128px;
+			}
+			&.oper {
+				background-position: center -192px;
+			}
+		}
+	}
+}
+//No JS styles
+.noJs {
+	.warnings {
+		display: block;
+		.JS {
+			display: block;
+			margin: 15px;
+		}
+	}
+	.welcome-page {
+		border: none;
+		margin: 150px 0 0;
+	}
+	.wrapper {
+		display: block;
+	}
+	.prepage .arrow {
+		display: none;
+	}
+	.small-link {
+		display: block;
+	}
+} 
+//OLD IE Styles
+.oldie {
+	.warnings {
+		display: block;
+		.old-br {
+			display: block;
+			margin: 15px;
+		}
+	}
+	.welcome-page {
+		border: none;
+		margin: 200px 0 0;
+	}
+	.wrapper {
+		display: block;
+		.prepage {
+			> div {
+				width: 49.9%
+			}
+			.arrow {
+				display: none;
+			}
+		}
+	}
+	.small-link {
+		display: block;
+	}
+	.social-links-box a {
+		background-image: url("../gfx/icons/social-ico-small.png");
+	}
+	.welcome-logo {
+		background-image: url("../gfx/site/welcome-logo-small.png");
+	}
+}
+@import "responsive"; //main objects styles

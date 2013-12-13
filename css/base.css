@@ -1,0 +1,622 @@
+/* Eric Meyer's CSS Reset */
+/* line 14, ../sass/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 24, ../sass/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 27, ../sass/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 30, ../sass/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 33, ../sass/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 37, ../sass/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 41, ../sass/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* End of Eric Meyer's CSS Reset */
+/* line 46, ../sass/_reset.scss */
+::-moz-selection {
+  background: #e5d9d0;
+  color: #5b353b;
+  text-shadow: none;
+}
+
+/* line 51, ../sass/_reset.scss */
+::selection {
+  background: #e5d9d0;
+  color: #5b353b;
+  text-shadow: none;
+}
+
+/* line 56, ../sass/_reset.scss */
+html {
+  height: 100%;
+}
+
+/* line 59, ../sass/_reset.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block;
+}
+
+/* line 62, ../sass/_reset.scss */
+body {
+  font: 14px/18px Arial, sans-serif;
+  height: 100%;
+  background: #e5d9d0;
+  color: #5b353b;
+  transition: all 1s linear;
+}
+
+/* line 69, ../sass/_reset.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 72, ../sass/_reset.scss */
+.wrapper {
+  display: none;
+  width: 100%;
+  min-width: 320px;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+}
+
+/* Middle
+-----------------------------------------------------------------------------*/
+/* line 83, ../sass/_reset.scss */
+.content {
+  padding: 0 0;
+}
+
+@font-face {
+  font-family: "TheanoOldStyleRegular";
+  src: url('/css/fonts/../fonts/TheanoOldStyle-Regular-webfont.eot');
+  src: url('/css/fonts/../fonts/TheanoOldStyle-Regular-webfont.eot?#iefix') format('eot'), url('/css/fonts/../fonts/TheanoOldStyle-Regular-webfont.woff') format('woff'), url('/css/fonts/../fonts/TheanoOldStyle-Regular-webfont.ttf') format('truetype'), url('/css/fonts/../fonts/TheanoOldStyle-Regular-webfont.svg') format('svg');
+}
+
+/* line 7, ../sass/base.scss */
+body.hovered {
+  background: #5b353b;
+}
+/* line 9, ../sass/base.scss */
+body.hovered .welcome-page {
+  border-color: #4E3136;
+}
+/* line 14, ../sass/base.scss */
+body.hovered .welcome-logo-container p {
+  color: #e5d9d0;
+}
+
+/* line 19, ../sass/base.scss */
+.welcome-page {
+  position: relative;
+  overflow: hidden;
+  border: 8px solid #5b353b;
+  min-height: 400px;
+}
+/* line 25, ../sass/base.scss */
+.welcome-page .welcome-logo-container {
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  margin: -200px 0 0 -150px;
+  z-index: 8;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+/* line 37, ../sass/base.scss */
+.welcome-page .welcome-logo-container:hover .welcome-logo {
+  background-position: 0 -299px;
+}
+/* line 42, ../sass/base.scss */
+.welcome-page .welcome-logo-container .welcome-logo {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  background: transparent url("../gfx/site/welcome-logo.png") no-repeat scroll 0 0;
+  background-size: 300px;
+}
+/* line 51, ../sass/base.scss */
+.welcome-page .welcome-logo-container p {
+  text-align: center;
+  margin: 0;
+  color: #5b353b;
+  font: normal 19px/1 'TheanoOldStyleRegular', serif;
+  transition: all 1s linear;
+}
+/* line 57, ../sass/base.scss */
+.welcome-page .welcome-logo-container p.name {
+  font-size: 38px;
+  margin: 0 0 5px 0;
+}
+
+/* line 65, ../sass/base.scss */
+.bubles {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+/* line 70, ../sass/base.scss */
+.bubles .bubles-one, .bubles .bubles-two, .bubles .bubles-three {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 1080px;
+  width: 1920px;
+  margin: -540px 0 0 -960px;
+  display: none;
+}
+/* line 79, ../sass/base.scss */
+.bubles .bubles-one {
+  background: transparent url("../gfx/bubles/bubles1_2.png") no-repeat scroll 0 0;
+}
+/* line 82, ../sass/base.scss */
+.bubles .bubles-two {
+  background: transparent url("../gfx/bubles/bubles2_2.png") no-repeat scroll 0 0;
+}
+/* line 85, ../sass/base.scss */
+.bubles .bubles-three {
+  background: transparent url("../gfx/bubles/bubles3_2.png") no-repeat scroll 0 0;
+}
+
+/* line 90, ../sass/base.scss */
+.prepage {
+  width: 100%;
+  overflow: hidden;
+}
+/* line 93, ../sass/base.scss */
+.prepage .small-link {
+  display: none;
+  width: 140px;
+  margin: 0 auto;
+  color: #5b353b;
+  height: 60px;
+  line-height: 60px;
+  padding: 0 0 0 60px;
+  font-size: 17px;
+  text-align: center;
+  text-decoration: none;
+}
+/* line 105, ../sass/base.scss */
+.prepage > div {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  width: 50%;
+  height: 100%;
+}
+/* line 112, ../sass/base.scss */
+.prepage > div.vitalii {
+  color: #e5d9d0;
+  background-color: #5b353b;
+  min-height: 940px;
+}
+/* line 116, ../sass/base.scss */
+.prepage > div.vitalii .column {
+  float: right;
+}
+/* line 119, ../sass/base.scss */
+.prepage > div.vitalii .text-box h2 span {
+  border-bottom: 2px solid #e5d9d0;
+}
+/* line 122, ../sass/base.scss */
+.prepage > div.vitalii .image-box a {
+  background: transparent url("../gfx/photos/vitalii.jpg") no-repeat scroll 0 0;
+}
+/* line 125, ../sass/base.scss */
+.prepage > div.vitalii .social-links-box {
+  border-top: 2px solid #e5d9d0;
+}
+/* line 128, ../sass/base.scss */
+.prepage > div.vitalii .arrow {
+  left: 1%;
+  background: transparent url("../gfx/icons/arrow-left.png") no-repeat center 0;
+}
+/* line 131, ../sass/base.scss */
+.prepage > div.vitalii .arrow span {
+  left: 70px;
+  color: #e5d9d0;
+}
+/* line 136, ../sass/base.scss */
+.prepage > div.vitalii .small-link {
+  background: url("../gfx/icons/arrow-left.png") no-repeat scroll 0 0 transparent;
+  color: #e5d9d0;
+}
+/* line 139, ../sass/base.scss */
+.prepage > div.vitalii .small-link:hover {
+  background-position: 0 -61px;
+}
+/* line 145, ../sass/base.scss */
+.prepage > div.viktoria {
+  color: #5b353b;
+}
+/* line 147, ../sass/base.scss */
+.prepage > div.viktoria .column {
+  float: left;
+}
+/* line 150, ../sass/base.scss */
+.prepage > div.viktoria .image-box a {
+  background: transparent url("../gfx/photos/vika.jpg") no-repeat scroll 0 0;
+}
+/* line 154, ../sass/base.scss */
+.prepage > div.viktoria .social-links-box .tw {
+  background-position: 0 0;
+}
+/* line 156, ../sass/base.scss */
+.prepage > div.viktoria .social-links-box .tw:hover {
+  background-position: 0 -25px;
+}
+/* line 160, ../sass/base.scss */
+.prepage > div.viktoria .social-links-box .tmb {
+  background-position: -25px 0;
+}
+/* line 162, ../sass/base.scss */
+.prepage > div.viktoria .social-links-box .tmb:hover {
+  background-position: -25px -25px;
+}
+/* line 166, ../sass/base.scss */
+.prepage > div.viktoria .social-links-box .lin {
+  background-position: -50px 0px;
+}
+/* line 168, ../sass/base.scss */
+.prepage > div.viktoria .social-links-box .lin:hover {
+  background-position: -50px -25px;
+}
+/* line 173, ../sass/base.scss */
+.prepage > div.viktoria .arrow {
+  right: 1%;
+  background: transparent url("../gfx/icons/arrow-right.png") no-repeat center 0;
+}
+/* line 176, ../sass/base.scss */
+.prepage > div.viktoria .arrow span {
+  right: 70px;
+}
+/* line 180, ../sass/base.scss */
+.prepage > div.viktoria .small-link {
+  background: url("../gfx/icons/arrow-right.png") no-repeat scroll right 0 transparent;
+  padding: 0 60px 0 0;
+}
+/* line 183, ../sass/base.scss */
+.prepage > div.viktoria .small-link:hover {
+  background-position: right -61px;
+}
+/* line 189, ../sass/base.scss */
+.prepage .column {
+  padding: 30px;
+  width: 400px;
+}
+/* line 192, ../sass/base.scss */
+.prepage .column .image-box {
+  overflow: hidden;
+  margin: 0 auto;
+  width: 260px;
+  height: 260px;
+  border-radius: 100%;
+  transition-duration: 0.5s;
+}
+/* line 199, ../sass/base.scss */
+.prepage .column .image-box:hover {
+  border-radius: 10px;
+}
+/* line 202, ../sass/base.scss */
+.prepage .column .image-box a {
+  display: block;
+  width: 260px;
+  height: 260px;
+  text-indent: -50000px;
+}
+/* line 207, ../sass/base.scss */
+.prepage .column .image-box a:hover {
+  background-position: 0 -260px !important;
+}
+/* line 212, ../sass/base.scss */
+.prepage .column .text-box {
+  padding: 40px;
+}
+/* line 214, ../sass/base.scss */
+.prepage .column .text-box h2 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font: normal 22px/1.5 'TheanoOldStyleRegular', serif;
+}
+/* line 219, ../sass/base.scss */
+.prepage .column .text-box h2 span {
+  display: block;
+  margin: 5px auto;
+  width: 45%;
+  border-bottom: 2px solid #5b353b;
+}
+/* line 226, ../sass/base.scss */
+.prepage .column .text-box h3 {
+  padding: 5px 0;
+  text-align: center;
+  font: normal 16px/1 serif;
+  font-style: italic;
+}
+/* line 232, ../sass/base.scss */
+.prepage .column .text-box p {
+  margin: 0 auto;
+  padding: 15px 0;
+  width: 200px;
+  text-align: justify;
+  font-size: 14px;
+  line-height: 1.5;
+}
+/* line 242, ../sass/base.scss */
+.prepage .social-links-box {
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 200px;
+  border-top: 2px solid #5b353b;
+}
+/* line 248, ../sass/base.scss */
+.prepage .social-links-box a {
+  float: left;
+  margin-right: 10px;
+  width: 25px;
+  height: 25px;
+  background: transparent url("../gfx/icons/social-ico.png") no-repeat scroll 0 0;
+  background-size: 75px;
+  text-indent: -50000px;
+}
+/* line 256, ../sass/base.scss */
+.prepage .social-links-box a.tw {
+  background-position: 0 -50px;
+}
+/* line 258, ../sass/base.scss */
+.prepage .social-links-box a.tw:hover {
+  background-position: 0 -75px;
+}
+/* line 262, ../sass/base.scss */
+.prepage .social-links-box a.tmb {
+  background-position: -25px -50px;
+}
+/* line 264, ../sass/base.scss */
+.prepage .social-links-box a.tmb:hover {
+  background-position: -25px -75px;
+}
+/* line 268, ../sass/base.scss */
+.prepage .social-links-box a.lin {
+  background-position: -50px -50px;
+}
+/* line 270, ../sass/base.scss */
+.prepage .social-links-box a.lin:hover {
+  background-position: -50px -75px;
+}
+/* line 276, ../sass/base.scss */
+.prepage .arrow {
+  position: fixed;
+  top: 50%;
+  margin: -50px 0 0;
+  width: 60px;
+  height: 60px;
+  color: #5b353b;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0;
+}
+/* line 287, ../sass/base.scss */
+.prepage .arrow:hover {
+  background-position: center -60px !important;
+  font-size: 16px;
+  line-height: 1;
+}
+/* line 292, ../sass/base.scss */
+.prepage .arrow span {
+  position: absolute;
+  top: 15px;
+  display: block;
+  transition: all 0.3s ease 0s;
+}
+
+/* line 301, ../sass/base.scss */
+.warnings {
+  background-color: #5b353b;
+  color: #e5d9d0;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.4;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 500;
+}
+/* line 313, ../sass/base.scss */
+.warnings > div {
+  padding: 15px;
+  border: 1px solid #e5d9d0;
+  display: none;
+}
+/* line 317, ../sass/base.scss */
+.warnings > div p {
+  margin: 0;
+}
+/* line 321, ../sass/base.scss */
+.warnings .best-browsers {
+  overflow: hidden;
+  max-width: 480px;
+  margin: 0 auto;
+}
+/* line 325, ../sass/base.scss */
+.warnings .best-browsers a {
+  float: left;
+  padding: 32px 0 0 0;
+  background: transparent url("../gfx/icons/icons-browsers.png") no-repeat scroll center 0;
+  height: 32px;
+  line-height: 32px;
+  margin: 30px 0 0;
+  text-align: center;
+  width: 120px;
+  color: #e5d9d0;
+}
+/* line 335, ../sass/base.scss */
+.warnings .best-browsers a:hover {
+  color: #9F5E67;
+}
+/* line 338, ../sass/base.scss */
+.warnings .best-browsers a.firf {
+  background-position: center -64px;
+}
+/* line 341, ../sass/base.scss */
+.warnings .best-browsers a.ie {
+  background-position: center -128px;
+}
+/* line 344, ../sass/base.scss */
+.warnings .best-browsers a.oper {
+  background-position: center -192px;
+}
+
+/* line 352, ../sass/base.scss */
+.noJs .warnings {
+  display: block;
+}
+/* line 354, ../sass/base.scss */
+.noJs .warnings .JS {
+  display: block;
+  margin: 15px;
+}
+/* line 359, ../sass/base.scss */
+.noJs .welcome-page {
+  border: none;
+  margin: 150px 0 0;
+}
+/* line 363, ../sass/base.scss */
+.noJs .wrapper {
+  display: block;
+}
+/* line 366, ../sass/base.scss */
+.noJs .prepage .arrow {
+  display: none;
+}
+/* line 369, ../sass/base.scss */
+.noJs .small-link {
+  display: block;
+}
+
+/* line 375, ../sass/base.scss */
+.oldie .warnings {
+  display: block;
+}
+/* line 377, ../sass/base.scss */
+.oldie .warnings .old-br {
+  display: block;
+  margin: 15px;
+}
+/* line 382, ../sass/base.scss */
+.oldie .welcome-page {
+  border: none;
+  margin: 200px 0 0;
+}
+/* line 386, ../sass/base.scss */
+.oldie .wrapper {
+  display: block;
+}
+/* line 389, ../sass/base.scss */
+.oldie .wrapper .prepage > div {
+  width: 49.9%;
+}
+/* line 392, ../sass/base.scss */
+.oldie .wrapper .prepage .arrow {
+  display: none;
+}
+/* line 397, ../sass/base.scss */
+.oldie .small-link {
+  display: block;
+}
+/* line 400, ../sass/base.scss */
+.oldie .social-links-box a {
+  background-image: url("../gfx/icons/social-ico-small.png");
+}
+/* line 403, ../sass/base.scss */
+.oldie .welcome-logo {
+  background-image: url("../gfx/site/welcome-logo-small.png");
+}
+
+@media only all and (max-width: 999px) {
+  /* line 3, ../sass/_responsive.scss */
+  .prepage .arrow {
+    display: none;
+  }
+  /* line 6, ../sass/_responsive.scss */
+  .prepage .column {
+    padding: 30px 0;
+  }
+  /* line 9, ../sass/_responsive.scss */
+  .prepage .column .text-box .small-link {
+    display: block;
+  }
+}
+@media only all and (max-width: 760px) {
+  /* line 19, ../sass/_responsive.scss */
+  .prepage > div {
+    float: none;
+    width: 100%;
+  }
+  /* line 22, ../sass/_responsive.scss */
+  .prepage > div.vitalii .column {
+    width: auto;
+    float: none;
+  }
+  /* line 26, ../sass/_responsive.scss */
+  .prepage > div.viktoria .column {
+    float: none;
+    width: auto;
+  }
+}
