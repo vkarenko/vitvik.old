@@ -69,25 +69,3 @@ body {
 a {
 	text-decoration: none;
 }
-.wrapper {
-	display: none;
-	width: 100%;
-	min-width: 320px;
-	min-height: 100%;
-	height: auto !important;
-	height: 100%;
-}
-
-/* Middle
------------------------------------------------------------------------------*/
-.content {
-	padding: 0 0;
-}
-
-@include font-face("TheanoOldStyleRegular", font-files(
-    "../fonts/TheanoOldStyle-Regular-webfont.woff", 
-    "../fonts/TheanoOldStyle-Regular-webfont.ttf", 
-    "../fonts/TheanoOldStyle-Regular-webfont.svg"
-  ), 
-  "../fonts/TheanoOldStyle-Regular-webfont.eot"
-);

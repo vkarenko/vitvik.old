@@ -86,9 +86,21 @@ body.hovered {
 		background: transparent url('../gfx/bubles/bubles3_2.png') no-repeat scroll 0 0;
 	}
 }
-//Prepage
-.prepage {
+
+.wrapper {
+	display: none;
 	width: 100%;
+	min-width: 320px;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+}
+
+/* Middle
+-----------------------------------------------------------------------------*/
+.content {
+	width: 100%;
+	height: 100%;
 	overflow: hidden;
 	.small-link {
 		display: none;
@@ -112,7 +124,7 @@ body.hovered {
 		&.vitalii {
 			color: $primary-color;
 			background-color: $sub-color;
-			min-height: 940px;
+			min-height: 920px;
 			.column {
 				float: right;
 			}

@@ -6,3 +6,12 @@
 //Variables
 $primary-color: #E5D9D0;
 $sub-color: #5B353B;
+
+//Fonts
+@include font-face("TheanoOldStyleRegular", font-files(
+    "../fonts/TheanoOldStyle-Regular-webfont.woff", 
+    "../fonts/TheanoOldStyle-Regular-webfont.ttf", 
+    "../fonts/TheanoOldStyle-Regular-webfont.svg"
+  ), 
+  "../fonts/TheanoOldStyle-Regular-webfont.eot"
+);

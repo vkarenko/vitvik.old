@@ -1,5 +1,5 @@
 @media only all and (max-width: 999px) {
-	.prepage {
+	.content {
 		.arrow {
 			display: none;
 		}
@@ -15,7 +15,7 @@
 }
 
 @media only all and (max-width: 760px) {
-	.prepage {
+	.content {
 		> div {
 			float: none;
 			width: 100%;
