@@ -1,8 +1,3 @@
-@font-face {
-  font-family: "TheanoOldStyleRegular";
-  src: url('/css/fonts/../fonts/TheanoOldStyle-Regular-webfont.eot');
-  src: url('/css/fonts/../fonts/TheanoOldStyle-Regular-webfont.eot?#iefix') format('eot'), url('/css/fonts/../fonts/TheanoOldStyle-Regular-webfont.woff') format('woff'), url('/css/fonts/../fonts/TheanoOldStyle-Regular-webfont.ttf') format('truetype'), url('/css/fonts/../fonts/TheanoOldStyle-Regular-webfont.svg') format('svg'); }
-
 /* Eric Meyer's CSS Reset */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -73,6 +68,11 @@ body {
 
 a {
   text-decoration: none; }
+
+@font-face {
+  font-family: "TheanoOldStyleRegular";
+  src: url('/css/fonts/../fonts/TheanoOldStyle-Regular-webfont.eot');
+  src: url('/css/fonts/../fonts/TheanoOldStyle-Regular-webfont.eot?#iefix') format('eot'), url('/css/fonts/../fonts/TheanoOldStyle-Regular-webfont.woff') format('woff'), url('/css/fonts/../fonts/TheanoOldStyle-Regular-webfont.ttf') format('truetype'), url('/css/fonts/../fonts/TheanoOldStyle-Regular-webfont.svg') format('svg'); }
 
 body.hovered {
   background: #5b353b; }

@@ -7,6 +7,33 @@
 $primary-color: #E5D9D0;
 $sub-color: #5B353B;
 
+::-moz-selection {
+	background: $primary-color;
+	color: $sub-color;
+	text-shadow: none;
+}
+::selection {
+background: $primary-color;
+color: $sub-color;
+text-shadow: none;
+}
+html {
+	height: 100%;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+	display: block;
+}
+body {
+	font: 14px/18px Arial, sans-serif;
+	height: 100%;
+	background: $primary-color;
+	color: $sub-color;
+	transition: all 1s linear;
+}
+a {
+	text-decoration: none;
+}
+
 //Fonts
 @include font-face("TheanoOldStyleRegular", font-files(
     "../fonts/TheanoOldStyle-Regular-webfont.woff", 
