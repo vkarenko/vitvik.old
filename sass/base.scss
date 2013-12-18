@@ -67,6 +67,11 @@ body.hovered {
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
+	svg {
+		display: block;
+		position: relative;
+		z-index: 1;
+	}
 	.bubles-one, .bubles-two, .bubles-three {
 		position: absolute;
 		top: 50%;
