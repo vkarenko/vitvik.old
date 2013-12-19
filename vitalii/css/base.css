@@ -1,0 +1,895 @@
+@charset "IBM866";
+/* Eric Meyer's CSS Reset */
+/* line 14, ../sass/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 24, ../sass/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 27, ../sass/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 30, ../sass/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 33, ../sass/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 37, ../sass/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 41, ../sass/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* End of Eric Meyer's CSS Reset */
+/* line 19, ../sass/_main.scss */
+*::-moz-selection {
+  background: #333333;
+  color: white;
+  text-shadow: none;
+}
+
+/* line 24, ../sass/_main.scss */
+::selection {
+  background: #333333;
+  color: white;
+  text-shadow: none;
+}
+
+/* line 29, ../sass/_main.scss */
+html {
+  height: 100%;
+}
+
+/* line 32, ../sass/_main.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block;
+}
+
+/* line 35, ../sass/_main.scss */
+body {
+  height: 100%;
+  background: white;
+  color: #212121;
+  letter-spacing: 0.03em;
+  font: 300 16px/24px 'TheanoOldStyleRegular', Arial, Tahoma, Verdana, sans-serif;
+}
+
+/* line 42, ../sass/_main.scss */
+a {
+  outline: none;
+  color: #777777;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* line 48, ../sass/_main.scss */
+a:hover {
+  color: #333333;
+}
+
+/* line 51, ../sass/_main.scss */
+p {
+  line-height: 26px;
+}
+
+/* line 54, ../sass/_main.scss */
+img {
+  max-width: 100%;
+  border: none;
+}
+
+/* line 58, ../sass/_main.scss */
+input {
+  vertical-align: middle;
+}
+
+/* line 61, ../sass/_main.scss */
+h1, h2, h3 {
+  text-transform: uppercase;
+}
+
+/* line 64, ../sass/_main.scss */
+h1 {
+  color: #212121;
+  letter-spacing: 0.1em;
+  font: 400 24px/1 'CantarellRegular', sans-serif;
+}
+
+/* line 69, ../sass/_main.scss */
+h2 {
+  margin-bottom: 24px;
+  color: #212121;
+  letter-spacing: 0.1em;
+  font: 400 18px/24px 'CantarellRegular', sans-serif;
+}
+
+/* line 75, ../sass/_main.scss */
+h3 {
+  margin-bottom: 6px;
+  color: #212121;
+  font: 500 15px/20px 'CantarellRegular',sans-serif;
+}
+
+/* line 80, ../sass/_main.scss */
+.wrapper {
+  display: none;
+  min-height: 100%;
+  width: 100%;
+  height: auto !important;
+  height: 100%;
+}
+
+/* line 87, ../sass/_main.scss */
+.container {
+  overflow: hidden;
+  margin: 0 auto;
+  width: 1200px;
+}
+
+@font-face {
+  font-family: "TheanoOldStyleRegular";
+  src: url('/css/fonts/TheanoOldStyle-Regular-webfont.eot');
+  src: url('/css/fonts/TheanoOldStyle-Regular-webfont.eot?#iefix') format('eot'), url('/css/fonts/TheanoOldStyle-Regular-webfont.woff') format('woff'), url('/css/fonts/TheanoOldStyle-Regular-webfont.ttf') format('truetype'), url('/css/fonts/TheanoOldStyle-Regular-webfont.svg') format('svg');
+}
+
+@font-face {
+  font-family: "HattoriHanzoLight";
+  src: url('/css/fonts/Hattori_Hanzo-webfont.eot');
+  src: url('/css/fonts/Hattori_Hanzo-webfont.eot?#iefix') format('eot'), url('/css/fonts/Hattori_Hanzo-webfont.woff') format('woff'), url('/css/fonts/Hattori_Hanzo-webfont.ttf') format('truetype'), url('/css/fonts/Hattori_Hanzo-webfont.svg') format('svg');
+}
+
+@font-face {
+  font-family: "HattoriHanzoLightItalic";
+  src: url('/css/fonts/Hattori_Hanzo_Italic-webfont.eot');
+  src: url('/css/fonts/Hattori_Hanzo_Italic-webfont.eot?#iefix') format('eot'), url('/css/fonts/Hattori_Hanzo_Italic-webfont.woff') format('woff'), url('/css/fonts/Hattori_Hanzo_Italic-webfont.ttf') format('truetype'), url('/css/fonts/Hattori_Hanzo_Italic-webfont.svg') format('svg');
+}
+
+@font-face {
+  font-family: "CantarellRegular";
+  src: url('/css/fonts/Cantarell-Regular-webfont.eot');
+  src: url('/css/fonts/Cantarell-Regular-webfont.eot?#iefix') format('eot'), url('/css/fonts/Cantarell-Regular-webfont.woff') format('woff'), url('/css/fonts/Cantarell-Regular-webfont.ttf') format('truetype'), url('/css/fonts/Cantarell-Regular-webfont.svg') format('svg');
+}
+
+@font-face {
+  font-family: "CantarellOblique";
+  src: url('/css/fonts/Cantarell-Oblique-webfont.eot');
+  src: url('/css/fonts/Cantarell-Oblique-webfont.eot?#iefix') format('eot'), url('/css/fonts/Cantarell-Oblique-webfont.woff') format('woff'), url('/css/fonts/Cantarell-Oblique-webfont.ttf') format('truetype'), url('/css/fonts/Cantarell-Oblique-webfont.svg') format('svg');
+}
+
+@font-face {
+  font-family: "CantarellBold";
+  src: url('/css/fonts/Cantarell-Bold-webfont.eot');
+  src: url('/css/fonts/Cantarell-Bold-webfont.eot?#iefix') format('eot'), url('/css/fonts/Cantarell-Bold-webfont.woff') format('woff'), url('/css/fonts/Cantarell-Bold-webfont.ttf') format('truetype'), url('/css/fonts/Cantarell-Bold-webfont.svg') format('svg');
+}
+
+@font-face {
+  font-family: "CantarellBoldOblique";
+  src: url('/css/fonts/Cantarell-BoldOblique-webfont.eot');
+  src: url('/css/fonts/Cantarell-BoldOblique-webfont.eot?#iefix') format('eot'), url('/css/fonts/Cantarell-BoldOblique-webfont.woff') format('woff'), url('/css/fonts/Cantarell-BoldOblique-webfont.ttf') format('truetype'), url('/css/fonts/Cantarell-BoldOblique-webfont.svg') format('svg');
+}
+
+/*LoadingBar styles*/
+@-webkit-keyframes opacity {
+  /* line 147, ../sass/_main.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 147, ../sass/_main.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes opacity {
+  /* line 148, ../sass/_main.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 148, ../sass/_main.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+/* line 149, ../sass/_main.scss */
+#loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  display: block;
+  margin: -10px 0 0 -25px;
+  width: 50px;
+  height: 20px;
+  font: 500 20px/1 'TheanoOldStyleRegular',serif;
+  text-align: center;
+  letter-spacing: 0.4em;
+}
+/* line 160, ../sass/_main.scss */
+#loading span {
+  -webkit-animation-name: opacity;
+  animation-name: opacity;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+/* line 167, ../sass/_main.scss */
+#loading span:nth-child(2) {
+  -webkit-animation-delay: 150ms;
+  animation-delay: 150ms;
+}
+/* line 171, ../sass/_main.scss */
+#loading span:nth-child(3) {
+  -webkit-animation-delay: 300ms;
+  animation-delay: 300ms;
+}
+
+/* Header
+-----------------------------------------------------------------------------*/
+/* line 6, ../sass/base.scss */
+.header {
+  padding: 24px 0;
+  border-bottom: 1px solid #ececec;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+/* line 11, ../sass/base.scss */
+.header .logo {
+  display: block;
+  float: left;
+  margin: 0 0 0 12px;
+  width: 116px;
+  transition: all 0.3s linear;
+}
+/* line 17, ../sass/base.scss */
+.header .logo img {
+  display: block;
+}
+
+/* line 22, ../sass/base.scss */
+.nav {
+  float: right;
+  padding: 11px 0;
+}
+/* line 25, ../sass/base.scss */
+.nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font: normal 14px/14px 'CantarellRegular',sans-serif;
+}
+
+/* line 32, ../sass/base.scss */
+.work .nav a:nth-child(1), .ican .nav a:nth-child(2) {
+  color: #000;
+}
+
+/* line 35, ../sass/base.scss */
+.work .logo, .ican .logo {
+  opacity: 0.8;
+}
+/* line 37, ../sass/base.scss */
+.work .logo:hover, .ican .logo:hover {
+  opacity: 1;
+}
+
+/* line 41, ../sass/base.scss */
+.nav-ico {
+  display: none;
+  margin: 2px 12px 0;
+  width: 44px;
+  height: 44px;
+  float: right;
+  background: transparent url("../gfx/icons/ico-menu@2x.png") no-repeat scroll 0 0;
+  background-size: 44px;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+}
+/* line 51, ../sass/base.scss */
+.nav-ico:hover, .nav-ico.active {
+  background-position: 0 -44px;
+}
+
+/* Middle
+-----------------------------------------------------------------------------*/
+/* line 57, ../sass/base.scss */
+.content {
+  padding: 0 0 288px 0;
+}
+
+/* line 61, ../sass/base.scss */
+.heading {
+  padding: 72px 0 0;
+  text-align: center;
+}
+/* line 64, ../sass/base.scss */
+.heading h1:after {
+  display: block;
+  margin-bottom: 0;
+  padding: 8px 0 5px;
+  color: black;
+  content: "• • •";
+  text-align: center;
+  letter-spacing: 0.1em;
+  font: 500 20px/20px 'TheanoOldStyleRegular',serif;
+}
+/* line 74, ../sass/base.scss */
+.heading p {
+  margin-bottom: 0;
+  padding: 0 210px 72px;
+  color: #777777;
+  text-transform: none;
+  letter-spacing: 0.04em;
+  font: normal 22px/34px 'TheanoOldStyleRegular',serif;
+}
+
+/* line 84, ../sass/base.scss */
+.samples {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+/* line 86, ../sass/base.scss */
+.samples .item {
+  position: relative;
+}
+/* line 88, ../sass/base.scss */
+.samples .item a {
+  display: block;
+  -webkit-touch-callout: none;
+}
+/* line 91, ../sass/base.scss */
+.samples .item a img {
+  display: block;
+}
+/* line 94, ../sass/base.scss */
+.samples .item a .hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  text-align: center;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  transition: all 0.2s linear 0s;
+}
+/* line 106, ../sass/base.scss */
+.samples .item a .hover:hover {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
+  filter: alpha(opacity=85);
+  opacity: 0.85;
+}
+/* line 111, ../sass/base.scss */
+.samples .item a .hover .link-text {
+  position: absolute;
+  text-align: center;
+  top: 41%;
+  width: 100%;
+}
+/* line 116, ../sass/base.scss */
+.samples .item a .hover .link-text p {
+  color: #666666;
+  font: normal 14px/1 'TheanoOldStyleRegular', serif;
+  letter-spacing: 0.03em;
+  margin-bottom: 6px;
+}
+/* line 121, ../sass/base.scss */
+.samples .item a .hover .link-text p:first-child {
+  color: black;
+  font: normal 26px/1 'CantarellRegular',sans-serif;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+/* line 135, ../sass/base.scss */
+.skils {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+/* line 138, ../sass/base.scss */
+.main-skills {
+  text-align: center;
+  padding: 0 0 24px;
+  border-bottom: 1px solid #ececec;
+}
+/* line 142, ../sass/base.scss */
+.main-skills .column {
+  -webkit-touch-callout: none;
+}
+/* line 144, ../sass/base.scss */
+.main-skills .column .circle {
+  position: relative;
+  margin: 0 auto 20px;
+  width: 180px;
+  height: 180px;
+  border: 1px solid #ececec;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+/* line 153, ../sass/base.scss */
+.main-skills .column .circle:before, .main-skills .column .circle:after {
+  position: absolute;
+  top: 0;
+  right: 50%;
+  z-index: 100;
+  color: #999999;
+  content: ".";
+  font: 400 62px/170px 'TheanoOldStyleRegular', Arial, Tahoma, Verdana, sans-serif;
+  transition: all 0.3s ease 0s;
+}
+/* line 163, ../sass/base.scss */
+.main-skills .column .circle:after {
+  right: auto;
+  left: 50%;
+}
+/* line 167, ../sass/base.scss */
+.main-skills .column .circle span {
+  position: absolute;
+  top: 150px;
+  display: block;
+  width: 100%;
+  color: #fff;
+  font-size: 22px;
+  line-height: 1;
+  opacity: 0;
+  transition: all 0.3s ease 0s;
+}
+/* line 180, ../sass/base.scss */
+.main-skills .column:hover .circle, .main-skills .column.clicked .circle {
+  border: 1px solid #212121;
+  background: #212121;
+}
+/* line 183, ../sass/base.scss */
+.main-skills .column:hover .circle:before, .main-skills .column:hover .circle:after, .main-skills .column.clicked .circle:before, .main-skills .column.clicked .circle:after {
+  color: #fff;
+}
+/* line 184, ../sass/base.scss */
+.main-skills .column:hover .circle span, .main-skills .column.clicked .circle span {
+  top: 80px;
+  opacity: 1;
+}
+/* line 189, ../sass/base.scss */
+.main-skills .column:hover p, .main-skills .column.clicked p {
+  opacity: 1;
+}
+/* line 192, ../sass/base.scss */
+.main-skills .column.js .circle:before {
+  content: "(";
+}
+/* line 193, ../sass/base.scss */
+.main-skills .column.js .circle:after {
+  content: ")";
+}
+/* line 195, ../sass/base.scss */
+.main-skills .column.js:hover .circle:before, .main-skills .column.js.clicked .circle:before {
+  right: 80%;
+}
+/* line 196, ../sass/base.scss */
+.main-skills .column.js:hover .circle:after, .main-skills .column.js.clicked .circle:after {
+  left: 80%;
+}
+/* line 200, ../sass/base.scss */
+.main-skills .column.html5 .circle:before {
+  content: "<";
+}
+/* line 201, ../sass/base.scss */
+.main-skills .column.html5 .circle:after {
+  content: ">";
+}
+/* line 203, ../sass/base.scss */
+.main-skills .column.html5:hover .circle:before, .main-skills .column.html5.clicked .circle:before {
+  right: 75%;
+}
+/* line 204, ../sass/base.scss */
+.main-skills .column.html5:hover .circle:after, .main-skills .column.html5.clicked .circle:after {
+  left: 75%;
+}
+/* line 208, ../sass/base.scss */
+.main-skills .column.css .circle:before {
+  content: "{";
+}
+/* line 209, ../sass/base.scss */
+.main-skills .column.css .circle:after {
+  content: "}";
+}
+/* line 211, ../sass/base.scss */
+.main-skills .column.css:hover .circle:before, .main-skills .column.css.clicked .circle:before {
+  right: 65%;
+}
+/* line 212, ../sass/base.scss */
+.main-skills .column.css:hover .circle:after, .main-skills .column.css.clicked .circle:after {
+  left: 65%;
+}
+/* line 215, ../sass/base.scss */
+.main-skills .column p {
+  margin: 0;
+  padding: 0 10%;
+  opacity: 0;
+  transition: all 0.3s ease 0s;
+}
+
+/* line 223, ../sass/base.scss */
+.other-skils {
+  padding: 48px 0 0;
+}
+/* line 225, ../sass/base.scss */
+.other-skils > p {
+  margin: 0;
+  padding: 0px 0 48px;
+  color: #777777;
+  text-align: center;
+  letter-spacing: 0.04em;
+  font: 300 22px/34px 'TheanoOldStyleRegular',serif;
+}
+/* line 234, ../sass/base.scss */
+.other-skils .item p {
+  margin: 0 12px 12px;
+  padding: 0 0 12px;
+  text-align: center;
+  border-bottom: 1px solid #ececec;
+  letter-spacing: 0.04em;
+  color: black;
+  font: 500 18px/18px 'CantarellRegular',sans-serif;
+}
+/* line 243, ../sass/base.scss */
+.other-skils .item span {
+  display: block;
+  text-align: justify;
+  line-height: 24px;
+  padding: 0 12px;
+  color: #333;
+}
+
+/* line 254, ../sass/base.scss */
+.columns:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+/* line 259, ../sass/base.scss */
+.columns .column {
+  float: left;
+  margin: 0 12px 24px;
+}
+/* line 262, ../sass/base.scss */
+.columns .column.one-third {
+  width: 376px;
+}
+/* line 265, ../sass/base.scss */
+.columns .column.two-third {
+  width: 776px;
+}
+/* line 268, ../sass/base.scss */
+.columns .column.one-fourth {
+  width: 276px;
+}
+
+/* line 275, ../sass/base.scss */
+.project {
+  padding: 72px 0 0;
+}
+
+/* line 278, ../sass/base.scss */
+.image-box {
+  max-width: 802px;
+  padding: 0 12px 24px;
+  margin: 0 auto;
+}
+/* line 282, ../sass/base.scss */
+.image-box img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* line 287, ../sass/base.scss */
+.project-info {
+  padding: 24px 0;
+  text-align: center;
+  border-bottom: 1px solid #ececec;
+  border-top: 1px solid #ececec;
+  color: #777777;
+}
+/* line 293, ../sass/base.scss */
+.project-info p {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font: normal 12px/12px 'CantarellRegular',sans-serif;
+  margin: 0 0 24px;
+}
+/* line 299, ../sass/base.scss */
+.project-info a {
+  font: normal 28px/34px 'TheanoOldStyleRegular',serif;
+  letter-spacing: 0.1em;
+}
+
+/* line 304, ../sass/base.scss */
+.project-control {
+  overflow: hidden;
+  padding: 48px 12px;
+}
+/* line 307, ../sass/base.scss */
+.project-control > a {
+  background: transparent url("../gfx/icons/ico-control@2x.png") no-repeat scroll 0 0;
+  text-indent: -50000px;
+  background-size: 75px;
+  opacity: 0.3;
+  transition: all 0.3s linear;
+}
+/* line 313, ../sass/base.scss */
+.project-control > a:hover {
+  opacity: 1;
+}
+/* line 317, ../sass/base.scss */
+.project-control .prev {
+  float: left;
+  width: 16px;
+  height: 39px;
+  background-position: -40px 0px;
+}
+/* line 323, ../sass/base.scss */
+.project-control .next {
+  float: right;
+  width: 16px;
+  height: 39px;
+  background-position: -57px 0px;
+}
+/* line 329, ../sass/base.scss */
+.project-control .to-portf {
+  display: block;
+  width: 39px;
+  height: 39px;
+  margin: 0 auto;
+  background-position: 0 0;
+}
+
+/* Footer
+-----------------------------------------------------------------------------*/
+/* line 339, ../sass/base.scss */
+.footer {
+  margin-top: -288px;
+  border-top: 1px solid #ececec;
+}
+/* line 342, ../sass/base.scss */
+.footer h2 {
+  margin-bottom: 12px;
+  color: #333333;
+  letter-spacing: 1px;
+  font: 500 15px/20px 'CantarellRegular',sans-serif;
+}
+/* line 348, ../sass/base.scss */
+.footer p {
+  color: #777777;
+  text-align: justify;
+}
+/* line 352, ../sass/base.scss */
+.footer .social {
+  line-height: 32px;
+}
+
+/* line 356, ../sass/base.scss */
+.footer-top {
+  padding: 48px 0 24px;
+}
+
+/* line 359, ../sass/base.scss */
+.footer-bottom {
+  border-top: 1px solid #e0e0e0;
+  background: #eeeeee;
+  padding: 24px 0;
+}
+/* line 363, ../sass/base.scss */
+.footer-bottom .social {
+  overflow: hidden;
+}
+/* line 365, ../sass/base.scss */
+.footer-bottom .social a {
+  float: left;
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin: 0 12px;
+  background: transparent url("../gfx/icons/ico-social@2x.png") no-repeat scroll 0 0;
+  background-size: 32px;
+  text-indent: -50000px;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+  filter: alpha(opacity=30);
+  opacity: 0.3;
+  transition: all 0.3s linear;
+}
+/* line 378, ../sass/base.scss */
+.footer-bottom .social a:hover {
+  opacity: 1;
+}
+/* line 381, ../sass/base.scss */
+.footer-bottom .social a.tm {
+  background-position: 0 -32px;
+}
+/* line 384, ../sass/base.scss */
+.footer-bottom .social a.ln {
+  background-position: 0 -64px;
+}
+
+/* Warnings
+-----------------------------------------------------------------------------*/
+/* line 393, ../sass/base.scss */
+.warnings {
+  display: none;
+}
+
+/* Responsive
+-----------------------------------------------------------------------------*/
+@media only all and (max-width: 1220px) {
+  /* line 2, ../sass/_responsive.scss */
+  .container {
+    width: 960px;
+  }
+
+  /* line 7, ../sass/_responsive.scss */
+  .other-skils .item p {
+    margin: 0 0 12px;
+    padding: 01;
+  }
+  /* line 11, ../sass/_responsive.scss */
+  .other-skils .item span {
+    padding: 0;
+  }
+
+  /* line 19, ../sass/_responsive.scss */
+  .columns .column.one-third {
+    width: 296px;
+  }
+  /* line 22, ../sass/_responsive.scss */
+  .columns .column.two-third {
+    width: 616px;
+  }
+  /* line 25, ../sass/_responsive.scss */
+  .columns .column.one-fourth {
+    width: 216px;
+  }
+}
+@media only all and (min-width: 762px) and (max-width: 978px) {
+  /* line 33, ../sass/_responsive.scss */
+  .container {
+    width: 744px;
+  }
+
+  /* line 37, ../sass/_responsive.scss */
+  .heading p {
+    padding: 0 72px 72px;
+  }
+
+  /* line 41, ../sass/_responsive.scss */
+  .skils .main-skills .js.column {
+    width: 720px;
+  }
+
+  /* line 47, ../sass/_responsive.scss */
+  .columns .column.one-third {
+    width: 348px;
+  }
+  /* line 50, ../sass/_responsive.scss */
+  .columns .column.two-third {
+    width: 720px;
+  }
+  /* line 53, ../sass/_responsive.scss */
+  .columns .column.one-fourth {
+    width: 348px;
+    margin: 0 12px 48px;
+  }
+
+  /* line 59, ../sass/_responsive.scss */
+  .footer-top .columns .column.two-third {
+    width: 348px;
+  }
+}
+@media only all and (max-width: 761px) {
+  /* line 65, ../sass/_responsive.scss */
+  h1 {
+    line-height: 1.4;
+  }
+
+  /* line 68, ../sass/_responsive.scss */
+  .container {
+    width: 456px;
+  }
+
+  /* line 72, ../sass/_responsive.scss */
+  .heading p {
+    padding: 0 24px 72px;
+  }
+
+  /* line 80, ../sass/_responsive.scss */
+  .columns .column.one-third {
+    width: 432px;
+  }
+  /* line 83, ../sass/_responsive.scss */
+  .columns .column.two-third {
+    width: 432px;
+  }
+  /* line 86, ../sass/_responsive.scss */
+  .columns .column.one-fourth {
+    width: 432px;
+    margin: 0 12px 48px;
+  }
+}
+@media only all and (max-width: 473px) {
+  /* line 95, ../sass/_responsive.scss */
+  .container {
+    width: 320px;
+  }
+
+  /* line 98, ../sass/_responsive.scss */
+  .nav-ico {
+    display: block;
+  }
+
+  /* line 101, ../sass/_responsive.scss */
+  .nav {
+    display: none;
+    float: none;
+    clear: both;
+    padding: 24px 0 0;
+  }
+
+  /* line 111, ../sass/_responsive.scss */
+  .columns .column.one-third {
+    width: 296px;
+  }
+  /* line 114, ../sass/_responsive.scss */
+  .columns .column.two-third {
+    width: 296px;
+  }
+  /* line 117, ../sass/_responsive.scss */
+  .columns .column.one-fourth {
+    width: 296px;
+    margin: 0 12px 48px;
+  }
+}

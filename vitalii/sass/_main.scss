@@ -1,0 +1,176 @@
+//Styles for main component
+
+@import 'compass/css3';
+@import 'compass/css3/user-interface';
+
+//Variables
+$primary-color: #fff;
+$sub-color: #000;
+$semi-dark-color: $sub-color + #777;
+$dark-color: $sub-color + #333;
+$darken-color: $sub-color + #212121;
+$smoken-color: #eee;
+//Borders styles
+$borders: 1px solid #ececec;
+$dark-borders: 1px solid #e0e0e0;
+//Main width
+$mainwidth: 1200px;
+
+*::-moz-selection {
+	background: $sub-color + #333;
+	color: $primary-color;
+	text-shadow: none;
+}
+::selection {
+	background: $sub-color + #333;
+	color: $primary-color;
+	text-shadow: none;
+}
+html {
+	height: 100%;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+	display: block;
+}
+body {
+	height: 100%;
+	background: $primary-color;
+	color: $darken-color;
+	letter-spacing: 0.03em;
+	font: 300 16px/24px 'TheanoOldStyleRegular', Arial, Tahoma, Verdana, sans-serif;
+}
+a {
+	outline: none;
+	color: $semi-dark-color;
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+a:hover {
+	color: $dark-color;
+}
+p {
+	line-height: 26px;
+}
+img {
+	max-width: 100%;
+	border: none;
+}
+input {
+	vertical-align: middle;
+}
+h1, h2, h3 {
+	text-transform: uppercase;
+}
+h1 {
+	color: #212121;
+	letter-spacing: 0.1em;
+	font: 400 24px/1 'CantarellRegular', sans-serif;
+}
+h2 {
+	margin-bottom: 24px;
+	color: #212121;
+	letter-spacing: 0.1em;
+	font: 400 18px/24px 'CantarellRegular', sans-serif;
+}
+h3 {
+	margin-bottom: 6px;
+	color: #212121;
+	font: 500 15px/20px 'CantarellRegular',sans-serif;
+}
+.wrapper {
+	display: none;
+	min-height: 100%;
+	width: 100%;
+	height: auto !important;
+	height: 100%;
+}
+.container {
+	overflow: hidden;
+	margin: 0 auto;
+	width: $mainwidth;
+}
+// Fonts
+@include font-face('TheanoOldStyleRegular', font-files(
+    'TheanoOldStyle-Regular-webfont.woff', 
+    'TheanoOldStyle-Regular-webfont.ttf', 
+    'TheanoOldStyle-Regular-webfont.svg'
+  ), 
+  'TheanoOldStyle-Regular-webfont.eot'
+);
+
+// Hattori
+@include font-face('HattoriHanzoLight', font-files(
+    'Hattori_Hanzo-webfont.woff', 
+    'Hattori_Hanzo-webfont.ttf', 
+    'Hattori_Hanzo-webfont.svg'
+  ), 
+  'Hattori_Hanzo-webfont.eot'
+);
+@include font-face('HattoriHanzoLightItalic', font-files(
+    'Hattori_Hanzo_Italic-webfont.woff', 
+    'Hattori_Hanzo_Italic-webfont.ttf', 
+    'Hattori_Hanzo_Italic-webfont.svg'
+  ), 
+  'Hattori_Hanzo_Italic-webfont.eot'
+);
+// Cantarell
+@include font-face('CantarellRegular', font-files(
+    'Cantarell-Regular-webfont.woff', 
+    'Cantarell-Regular-webfont.ttf', 
+    'Cantarell-Regular-webfont.svg'
+  ), 
+  'Cantarell-Regular-webfont.eot'
+);
+@include font-face('CantarellOblique', font-files(
+    'Cantarell-Oblique-webfont.woff', 
+    'Cantarell-Oblique-webfont.ttf', 
+    'Cantarell-Oblique-webfont.svg'
+  ), 
+  'Cantarell-Oblique-webfont.eot'
+);
+@include font-face('CantarellBold', font-files(
+    'Cantarell-Bold-webfont.woff', 
+    'Cantarell-Bold-webfont.ttf', 
+    'Cantarell-Bold-webfont.svg'
+  ), 
+  'Cantarell-Bold-webfont.eot'
+);
+@include font-face('CantarellBoldOblique', font-files(
+    'Cantarell-BoldOblique-webfont.woff', 
+    'Cantarell-BoldOblique-webfont.ttf', 
+    'Cantarell-BoldOblique-webfont.svg'
+  ), 
+  'Cantarell-BoldOblique-webfont.eot'
+);
+
+/*LoadingBar styles*/
+@-webkit-keyframes opacity { 0% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes opacity { 0% { opacity: 1; } 100% { opacity: 0; } }
+#loading {
+	position: fixed;
+	top: 50%;
+	left: 50%; 
+	display: block;
+	margin: -10px 0 0 -25px;
+	width: 50px;
+	height: 20px;
+	font: 500 20px/1 'TheanoOldStyleRegular',serif;
+	text-align: center;
+	letter-spacing: 0.4em;
+	span {
+		-webkit-animation-name: opacity;
+		animation-name: opacity;
+		-webkit-animation-duration: 1s;
+		animation-duration: 1s;
+		-webkit-animation-iteration-count: infinite;
+		animation-iteration-count: infinite;
+		&:nth-child(2) {
+			-webkit-animation-delay: 150ms;
+			animation-delay: 150ms;
+		}
+		&:nth-child(3) {
+			-webkit-animation-delay: 300ms;
+			animation-delay: 300ms;
+		}
+	}
+}

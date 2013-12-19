@@ -1,0 +1,399 @@
+//Vitvik main scss file
+@import "reset"; //reset styles
+@import "main"; //main objects styles
+/* Header
+-----------------------------------------------------------------------------*/
+.header {
+	padding: 24px 0;
+	border-bottom: $borders;
+	@include user-select(none);
+	-webkit-touch-callout: none;
+	.logo {
+		display: block;
+		float: left;
+		margin: 0 0 0 12px;
+		width: 116px;
+		transition: all 0.3s linear;
+		img {
+			display: block;
+		}
+	}
+}
+.nav {
+	float: right;
+	padding: 11px 0;
+	a {
+		margin: 0 12px;
+		text-decoration: none;
+		text-transform: uppercase;
+		font: normal 14px/14px 'CantarellRegular',sans-serif;
+	}
+}
+.work .nav a:nth-child(1), .ican .nav a:nth-child(2) {
+	color: #000;
+}
+.work .logo, .ican .logo {
+	opacity: 0.8;
+	&:hover {
+		opacity: 1;
+	}
+}
+.nav-ico {
+	display: none;
+	margin: 2px 12px 0;
+	width: 44px;
+	height: 44px;
+	float: right;
+	background: transparent url('../gfx/icons/ico-menu@2x.png') no-repeat scroll 0 0;
+	background-size: 44px;
+	cursor: pointer;
+	-webkit-touch-callout: none;
+	&:hover, &.active {
+		background-position: 0 -44px;
+	}
+}
+/* Middle
+-----------------------------------------------------------------------------*/
+.content {
+	padding: 0 0 288px 0;
+}
+
+.heading {
+	padding: 72px 0 0;
+	text-align: center;
+	h1:after {
+		display: block;
+		margin-bottom: 0;
+		padding: 8px 0 5px;
+		color: $sub-color;
+		content: "• • •";
+		text-align: center;
+		letter-spacing: 0.1em;
+		font: 500 20px/20px 'TheanoOldStyleRegular',serif;
+	}
+	p {
+		margin-bottom: 0;
+		padding: 0 210px 72px;
+		color: $semi-dark-color;
+		text-transform: none;
+		letter-spacing: 0.04em;
+		font: normal 22px/34px 'TheanoOldStyleRegular',serif;
+	}
+}
+// Samples Styles
+.samples {
+	@include user-select(none);
+	.item {
+		position: relative;
+		a {
+			display: block;
+			-webkit-touch-callout: none;
+			img {
+				display: block;
+			}
+			.hover {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: $primary-color;
+				text-align: center;
+				opacity: 0;
+				-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+				filter: alpha(opacity=0);
+				transition: all 0.2s linear 0s;
+				&:hover {
+					-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
+					filter: alpha(opacity=85);
+					opacity: 0.85;
+				}
+				.link-text {
+					position: absolute;
+					text-align: center;
+					top: 41%;
+					width: 100%;
+					p {
+						color: $sub-color + #666;
+						font: normal 14px/1 'TheanoOldStyleRegular', serif;
+						letter-spacing: 0.03em;
+						margin-bottom: 6px;
+						&:first-child {
+							color: $sub-color;
+							font: normal 26px/1 'CantarellRegular',sans-serif;
+							margin-bottom: 10px;
+							text-transform: uppercase;
+							letter-spacing: 0.12em;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+// Skils styles
+.skils {
+@include user-select(none);
+}
+.main-skills {
+	text-align: center;
+	padding: 0 0 24px;
+	border-bottom: $borders;
+	.column {
+		-webkit-touch-callout: none;
+		.circle {
+			position: relative;
+			margin: 0 auto 20px;
+			width: 180px;
+			height: 180px;
+			border: $borders;
+			border-radius: 100%;
+			cursor: pointer;
+			transition: all 0.3s ease 0s;
+			&:before, &:after {
+				position: absolute;
+				top: 0;
+				right: 50%;
+				z-index: 100;
+				color: $semi-dark-color + #222;
+				content: ".";
+				font: 400 62px/170px 'TheanoOldStyleRegular', Arial, Tahoma, Verdana, sans-serif;
+				transition: all 0.3s ease 0s;
+			}
+			&:after {
+				right: auto;
+				left: 50%;
+			}
+			span {
+				position: absolute;
+				top: 150px;
+				display: block;
+				width: 100%;
+				color: #fff;
+				font-size: 22px;
+				line-height: 1;
+				opacity: 0;
+				transition: all 0.3s ease 0s;
+			}
+		}
+		&:hover, &.clicked {
+			.circle {
+				border: 1px solid #212121;
+				background: #212121;
+				&:before, &:after { color: #fff; }
+				span {
+					top: 80px;
+					opacity: 1;
+				}
+			}
+			p { opacity: 1; }
+		}
+		&.js {
+			.circle:before { content: "("; }
+			.circle:after { content: ")"; }
+			&:hover, &.clicked {
+				.circle:before { right: 80%; }
+				.circle:after { left: 80%; }
+			}
+		}
+		&.html5 {
+			.circle:before { content: "<"; }
+			.circle:after { content: ">"; }
+			&:hover, &.clicked {
+				.circle:before { right: 75%; }
+				.circle:after { left: 75%; }
+			}
+		}
+		&.css {
+			.circle:before { content: "{"; }
+			.circle:after { content: "}"; }
+			&:hover, &.clicked {
+				.circle:before { right: 65%; }
+				.circle:after { left: 65%; }
+			}
+		}
+		p {
+			margin: 0;
+			padding: 0 10%;
+			opacity: 0;
+			transition: all 0.3s ease 0s;
+		}
+	}
+}
+.other-skils {
+	padding: 48px 0 0;
+	> p {
+		margin: 0;
+		padding: 0px 0 48px;
+		color: $semi-dark-color;
+		text-align: center;
+		letter-spacing: 0.04em;
+		font: 300 22px/34px 'TheanoOldStyleRegular',serif;
+	}
+	.item {
+		p {
+			margin: 0 12px 12px;
+			padding: 0 0 12px;
+			text-align: center;
+			border-bottom: $borders;
+			letter-spacing: 0.04em;
+			color: $sub-color;
+			font: 500 18px/18px 'CantarellRegular',sans-serif;
+		}
+		span {
+			display: block;
+			text-align: justify;
+			line-height: 24px;
+			padding: 0 12px;
+			color: #333;
+		}
+	}
+}
+// Columns styles
+.columns {
+	&:after {
+		display: block;
+		clear: both;
+		content: "";
+	}
+	.column {
+		float: left;
+		margin: 0 12px 24px;
+		&.one-third {
+			width: 376px;
+		}
+		&.two-third {
+			width: 776px;
+		}
+		&.one-fourth {
+			width: 276px;
+		}
+	}
+}
+
+// Projects styles
+.project {
+	padding: 72px 0 0;
+}
+.image-box {
+	max-width: 802px;
+	padding: 0 12px 24px;
+	margin: 0 auto;
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+}
+.project-info {
+	padding: 24px 0;
+	text-align: center;
+	border-bottom: $borders;
+	border-top: $borders;
+	color: $semi-dark-color;
+	p {
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		font: normal 12px/12px 'CantarellRegular',sans-serif;
+		margin: 0 0 24px;
+	}
+	a {
+		font: normal 28px/34px 'TheanoOldStyleRegular',serif;
+		letter-spacing: 0.1em;
+	}
+}
+.project-control {
+	overflow: hidden;
+	padding: 48px 12px;
+	> a {
+		background: transparent url('../gfx/icons/ico-control@2x.png') no-repeat scroll 0 0;
+		text-indent: -50000px;
+		background-size: 75px;
+		opacity: 0.3;
+		transition: all 0.3s linear;
+		&:hover {
+			opacity: 1;
+		}
+	}
+	.prev {
+		float: left;
+		width: 16px;
+		height: 39px;
+		background-position: -40px 0px;
+	}
+	.next {
+		float: right;
+		width: 16px;
+		height: 39px;
+		background-position: -57px 0px;
+	}
+	.to-portf {
+		display: block;
+		width: 39px;
+		height: 39px;
+		margin: 0 auto;
+		background-position: 0 0;
+	}
+}
+/* Footer
+-----------------------------------------------------------------------------*/
+.footer {
+	margin-top: -288px;
+	border-top: $borders;
+	h2 {
+		margin-bottom: 12px;
+		color: $dark-color;
+		letter-spacing: 1px;
+		font: 500 15px/20px 'CantarellRegular',sans-serif;
+	}
+	p {
+		color: $semi-dark-color;
+		text-align: justify;
+	}
+	.social {
+		line-height: 32px;
+	}
+}
+.footer-top {
+	padding: 48px 0 24px;
+}
+.footer-bottom {
+	border-top: $dark-borders;
+	background: $smoken-color;
+	padding: 24px 0;
+	.social {
+		overflow: hidden;
+		a {
+			float: left;
+			display: block;
+			width: 32px;
+			height: 32px;
+			margin: 0 12px;
+			background: transparent url('../gfx/icons/ico-social@2x.png') no-repeat scroll 0 0;
+			background-size: 32px;
+			text-indent: -50000px;
+			-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+			filter: alpha(opacity=30);
+			opacity: 0.3;
+			transition: all 0.3s linear;
+			&:hover {
+				opacity: 1;
+			}
+			&.tm {
+				background-position: 0 -32px;
+			}
+			&.ln {
+				background-position: 0 -64px;
+			}
+		}
+	}
+}
+
+/* Warnings
+-----------------------------------------------------------------------------*/
+.warnings {
+	display: none;
+}
+
+/* Responsive
+-----------------------------------------------------------------------------*/
+@import "responsive"; //main objects styles

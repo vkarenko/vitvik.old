@@ -11,7 +11,7 @@ body.hovered {
 		
 	}
 	.welcome-logo-container { 
-		p {
+		span {
 			color: $primary-color;
 		}
 	}
@@ -40,6 +40,8 @@ body.hovered {
 		}
 
 		.welcome-logo {
+			text-indent: -50000px;
+			overflow: hidden;
 			position: relative;
 			display: block;
 			margin: 0 auto;
@@ -48,7 +50,8 @@ body.hovered {
 			background: transparent url('../gfx/site/welcome-logo.png') no-repeat scroll 0 0;
 			background-size: 300px;
 		}
-		p {
+		span {
+			display: block;
 			text-align: center;
 			margin: 0;
 			color: $sub-color;

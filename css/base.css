@@ -78,7 +78,7 @@ body.hovered {
   background: #5b353b; }
   body.hovered .welcome-page {
     border-color: #4E3136; }
-  body.hovered .welcome-logo-container p {
+  body.hovered .welcome-logo-container span {
     color: #e5d9d0; }
 
 .welcome-page {
@@ -102,6 +102,8 @@ body.hovered {
     .welcome-page .welcome-logo-container:hover .welcome-logo {
       background-position: 0 -299px; }
     .welcome-page .welcome-logo-container .welcome-logo {
+      text-indent: -50000px;
+      overflow: hidden;
       position: relative;
       display: block;
       margin: 0 auto;
@@ -109,13 +111,14 @@ body.hovered {
       height: 300px;
       background: transparent url("../gfx/site/welcome-logo.png") no-repeat scroll 0 0;
       background-size: 300px; }
-    .welcome-page .welcome-logo-container p {
+    .welcome-page .welcome-logo-container span {
+      display: block;
       text-align: center;
       margin: 0;
       color: #5b353b;
       font: normal 19px/1 'TheanoOldStyleRegular', serif;
       transition: all 1s linear; }
-      .welcome-page .welcome-logo-container p.name {
+      .welcome-page .welcome-logo-container span.name {
         font-size: 38px;
         margin: 0 0 5px 0; }
 

@@ -1,0 +1,17 @@
+Options +FollowSymLinks
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^vitvik.com
+RewriteRule (.*) http://www.vitvik.com/$1 [R=301,L]
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/
+RewriteRule ^index\.html$ http://www.vitvik.com/ [R=301,L]
+
+DirectoryIndex index.html
+ErrorDocument 403 /index.html
+ErrorDocument 404 /index.html
+AddHandler server-parsed .html .htm
+AddType text/html .shtml
+AddHandler server-parsed .shtml
+Options Indexes FollowSymLinks Includes
+AddHandler server-parsed .html
+AddHandler server-parsed .htm
