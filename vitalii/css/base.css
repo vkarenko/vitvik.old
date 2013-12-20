@@ -307,7 +307,7 @@ h3 {
 
 /* line 35, ../sass/base.scss */
 .work .logo, .ican .logo {
-  opacity: 0.8;
+  opacity: 0.3;
 }
 /* line 37, ../sass/base.scss */
 .work .logo:hover, .ican .logo:hover {
@@ -772,106 +772,111 @@ h3 {
     width: 960px;
   }
 
-  /* line 7, ../sass/_responsive.scss */
+  /* line 5, ../sass/_responsive.scss */
+  .samples .item a .hover .link-text p:first-child {
+    font-size: 20px;
+  }
+
+  /* line 10, ../sass/_responsive.scss */
   .other-skils .item p {
     margin: 0 0 12px;
     padding: 01;
   }
-  /* line 11, ../sass/_responsive.scss */
+  /* line 14, ../sass/_responsive.scss */
   .other-skils .item span {
     padding: 0;
   }
 
-  /* line 19, ../sass/_responsive.scss */
+  /* line 22, ../sass/_responsive.scss */
   .columns .column.one-third {
     width: 296px;
   }
-  /* line 22, ../sass/_responsive.scss */
+  /* line 25, ../sass/_responsive.scss */
   .columns .column.two-third {
     width: 616px;
   }
-  /* line 25, ../sass/_responsive.scss */
+  /* line 28, ../sass/_responsive.scss */
   .columns .column.one-fourth {
     width: 216px;
   }
 }
 @media only all and (min-width: 762px) and (max-width: 978px) {
-  /* line 33, ../sass/_responsive.scss */
+  /* line 36, ../sass/_responsive.scss */
   .container {
     width: 744px;
   }
 
-  /* line 37, ../sass/_responsive.scss */
+  /* line 40, ../sass/_responsive.scss */
   .heading p {
     padding: 0 72px 72px;
   }
 
-  /* line 41, ../sass/_responsive.scss */
+  /* line 44, ../sass/_responsive.scss */
   .skils .main-skills .js.column {
     width: 720px;
   }
 
-  /* line 47, ../sass/_responsive.scss */
+  /* line 50, ../sass/_responsive.scss */
   .columns .column.one-third {
     width: 348px;
   }
-  /* line 50, ../sass/_responsive.scss */
+  /* line 53, ../sass/_responsive.scss */
   .columns .column.two-third {
     width: 720px;
   }
-  /* line 53, ../sass/_responsive.scss */
+  /* line 56, ../sass/_responsive.scss */
   .columns .column.one-fourth {
     width: 348px;
     margin: 0 12px 48px;
   }
 
-  /* line 59, ../sass/_responsive.scss */
+  /* line 62, ../sass/_responsive.scss */
   .footer-top .columns .column.two-third {
     width: 348px;
   }
 }
 @media only all and (max-width: 761px) {
-  /* line 65, ../sass/_responsive.scss */
+  /* line 68, ../sass/_responsive.scss */
   h1 {
     line-height: 1.4;
   }
 
-  /* line 68, ../sass/_responsive.scss */
+  /* line 71, ../sass/_responsive.scss */
   .container {
     width: 456px;
   }
 
-  /* line 72, ../sass/_responsive.scss */
+  /* line 75, ../sass/_responsive.scss */
   .heading p {
     padding: 0 24px 72px;
   }
 
-  /* line 80, ../sass/_responsive.scss */
+  /* line 83, ../sass/_responsive.scss */
   .columns .column.one-third {
     width: 432px;
   }
-  /* line 83, ../sass/_responsive.scss */
+  /* line 86, ../sass/_responsive.scss */
   .columns .column.two-third {
     width: 432px;
   }
-  /* line 86, ../sass/_responsive.scss */
+  /* line 89, ../sass/_responsive.scss */
   .columns .column.one-fourth {
     width: 432px;
     margin: 0 12px 48px;
   }
 }
 @media only all and (max-width: 473px) {
-  /* line 95, ../sass/_responsive.scss */
+  /* line 98, ../sass/_responsive.scss */
   .container {
     width: 320px;
   }
 
-  /* line 98, ../sass/_responsive.scss */
+  /* line 101, ../sass/_responsive.scss */
   .nav-ico {
     display: block;
   }
 
-  /* line 101, ../sass/_responsive.scss */
+  /* line 104, ../sass/_responsive.scss */
   .nav {
     display: none;
     float: none;
@@ -879,15 +884,15 @@ h3 {
     padding: 24px 0 0;
   }
 
-  /* line 111, ../sass/_responsive.scss */
+  /* line 114, ../sass/_responsive.scss */
   .columns .column.one-third {
     width: 296px;
   }
-  /* line 114, ../sass/_responsive.scss */
+  /* line 117, ../sass/_responsive.scss */
   .columns .column.two-third {
     width: 296px;
   }
-  /* line 117, ../sass/_responsive.scss */
+  /* line 120, ../sass/_responsive.scss */
   .columns .column.one-fourth {
     width: 296px;
     margin: 0 12px 48px;
