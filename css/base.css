@@ -338,16 +338,18 @@ body.hovered {
       margin: 0; }
   .warnings .best-browsers {
     overflow: hidden;
-    max-width: 480px;
-    margin: 0 auto; }
+    max-width: 492px;
+    margin: 0 auto;
+    text-align: center; }
     .warnings .best-browsers a {
-      float: left;
+      display: inline-block;
+      *display: inline;
+      zoom: 1;
       padding: 32px 0 0 0;
       background: transparent url("../gfx/icons/icons-browsers.png") no-repeat scroll center 0;
       height: 32px;
       line-height: 32px;
       margin: 30px 0 0;
-      text-align: center;
       width: 120px;
       color: #e5d9d0; }
       .warnings .best-browsers a:hover {
@@ -373,6 +375,8 @@ body.hovered {
   display: none; }
 .noJs .small-link {
   display: block; }
+.noJs.oldie .welcome-page {
+  margin: 290px 0 0; }
 
 .oldie .warnings {
   display: block; }
@@ -382,11 +386,13 @@ body.hovered {
 .oldie .welcome-page {
   border: none;
   margin: 200px 0 0; }
+  .oldie .welcome-page .bubles svg {
+    display: none; }
 .oldie .wrapper {
   display: block; }
-  .oldie .wrapper .prepage > div {
+  .oldie .wrapper .content > div {
     width: 49.9%; }
-  .oldie .wrapper .prepage .arrow {
+  .oldie .wrapper .content .arrow {
     display: none; }
 .oldie .small-link {
   display: block; }
@@ -411,4 +417,13 @@ body.hovered {
       float: none; }
     .content > div.viktoria .column {
       float: none;
-      width: auto; } }
+      width: auto; }
+
+  .oldie .wrapper .content > div {
+    width: 100%; } }
+@media only all and (max-width: 570px) {
+  .warnings .best-browsers {
+    max-width: 300px; }
+
+  .oldie .welcome-page {
+    margin: 294px 0 0; } }

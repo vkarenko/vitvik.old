@@ -388,10 +388,56 @@
 	}
 }
 
-/* Warnings
------------------------------------------------------------------------------*/
+/*noJS and oldBrowsers Styles
+-------------------------------------------------------------------------------------------------------------------*/
 .warnings {
-	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	> div {
+		border: 1px solid #ff0000;
+		color: #ff0000;
+		padding: 12px;
+		background: #fff;
+		text-align: center;
+		display: none;
+		p {
+			margin: 0;
+		}
+		.best-browsers a {
+			margin: 10px;
+		}
+	}
+}
+.noJs{
+	#loading {
+		display: none;
+	}
+	.wrapper {
+		display: block;
+		padding: 56px 0 0;
+	}
+	.JS {
+		display: block;
+	}
+	&.oldie {
+		.wrapper {
+			padding: 173px 0 0;
+		}
+		.JS {
+			margin: 0 0 20px;
+		}
+	}
+}
+.oldie {
+	.old-br {
+		display: block;
+	}
+	.wrapper {
+		display: block;
+		padding: 100px 0 0;
+	}
 }
 
 /* Responsive

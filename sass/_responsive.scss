@@ -28,5 +28,18 @@
 				width: auto;
 			}
 		}
-	} 
+	}
+
+	.oldie .wrapper .content > div {
+		width: 100%
+	}
+}
+
+@media only all and (max-width: 570px) {
+	.warnings .best-browsers {
+		max-width: 300px;
+	}
+	.oldie .welcome-page {
+		margin: 294px 0 0;
+	}
 }
